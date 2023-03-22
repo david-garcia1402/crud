@@ -11,9 +11,6 @@
 </head>
 <body>
     <h2>TESTE SMARTNESS</h2>
-    <?php 
-    
-    ?>
 <form action="cad.php" method="GET" class="was-validated">        
   <div class="mb-3 mt-3">  
     <label for="name" class="form-label">Nome:</label>
