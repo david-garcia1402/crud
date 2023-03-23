@@ -10,15 +10,33 @@
     <title>Teste</title>
 </head>
 <body>
-    <h2>CADASTRO:</h2>
+    <h2 class="titulo">CADASTRO:</h2>
     <style>
       body{
         background-color: #f2f2f2;
+        padding-top: 100px;
       }
 
       .card
       {
         padding-bottom: 25px;
+      }
+
+      .titulo{
+        display: flex;
+        margin-left: 45%;
+        text-shadow: 2px 2px #e5e5e5;
+
+      }
+
+      .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 8px;
       }
     </style>
 <form action="cad.php" method="GET" class="was-validated">        
@@ -38,9 +56,9 @@
             <label for="datetime" class="form-date">Data de nascimento </label>
             <input type="date" id ="date" name="date" class="form-control" required>
           </div>
-            <label for="message">* Mensagem:</label>
-            <textarea id="message" name="message" ></textarea>
-            <button type="submit">Enviar</button>
+            <label for="password">Senha:</label>
+            <input type="password" id = "password" name="date" class="form-control" required>
+            <button type="submit">Cadastrar</button>
         </div>
       </div>
     </div>
