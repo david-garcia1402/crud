@@ -39,30 +39,31 @@
         border-radius: 8px;
       }
     </style>
-<form action="cad.php" method="GET" class="was-validated">        
-  <div class = "login">
-    <div class ="container">
-      <div class ="row">
-        <div class="card">
-          <div class="mb-3 mt-3">  
-            <label for="name" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
+<form action="salvar-usuario.php" method="GET" class="was-validated">        
+  <input type="hidden" name ="acao" value="cadastrar">
+    <div class = "login">
+      <div class ="container">
+        <div class ="row">
+          <div class="card">
+            <div class="mb-3 mt-3">  
+              <label for="name" class="form-label">Nome:</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail:</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
+            </div>
+            <div class="mb-3">
+              <label for="datetime" class="form-date">Data de cadastro </label>
+              <input type="date" id ="date" name="date" class="form-control" required>
+            </div>
+              <label for="password">Senha:</label>
+              <input type="password" id = "password" name="password" class="form-control" required>
+              <button type="submit">Cadastrar</button>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail:</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
-          </div>
-          <div class="mb-3 mt-3">
-            <label for="datetime" class="form-date">Data de cadastro </label>
-            <input type="date" id ="date" name="date" class="form-control" required>
-          </div>
-            <label for="password">Senha:</label>
-            <input type="password" id = "password" name="password" class="form-control" required>
-            <button type="submit">Cadastrar</button>
         </div>
       </div>
     </div>
-  </div>
 </form> 
 </body>
 
