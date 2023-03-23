@@ -53,11 +53,11 @@
             <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
           </div>
           <div class="mb-3 mt-3">
-            <label for="datetime" class="form-date">Data de nascimento </label>
+            <label for="datetime" class="form-date">Data de cadastro </label>
             <input type="date" id ="date" name="date" class="form-control" required>
           </div>
             <label for="password">Senha:</label>
-            <input type="password" id = "password" name="date" class="form-control" required>
+            <input type="password" id = "password" name="password" class="form-control" required>
             <button type="submit">Cadastrar</button>
         </div>
       </div>
