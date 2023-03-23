@@ -11,6 +11,11 @@
 </head>
 <body>
     <h2>TESTE SMARTNESS</h2>
+    <style>
+      body{
+        background-color: #f2f2f2;
+      }
+    </style>
 <form action="cad.php" method="GET" class="was-validated">        
   <div class="mb-3 mt-3">  
     <label for="name" class="form-label">Nome:</label>
