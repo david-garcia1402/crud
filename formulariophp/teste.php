@@ -10,31 +10,41 @@
     <title>Teste</title>
 </head>
 <body>
-    <h2>TESTE SMARTNESS</h2>
+    <h2>CADASTRO:</h2>
     <style>
       body{
         background-color: #f2f2f2;
       }
+
+      .card
+      {
+        padding-bottom: 25px;
+      }
     </style>
 <form action="cad.php" method="GET" class="was-validated">        
-  <div class="mb-3 mt-3">  
-    <label for="name" class="form-label">Nome:</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
+  <div class = "login">
+    <div class ="container">
+      <div class ="row">
+        <div class="card">
+          <div class="mb-3 mt-3">  
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="datetime" class="form-date">Data de nascimento </label>
+            <input type="date" id ="date" name="date" class="form-control" required>
+          </div>
+            <label for="message">* Mensagem:</label>
+            <textarea id="message" name="message" ></textarea>
+            <button type="submit">Enviar</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">E-mail:</label>
-    <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
-  </div>
-  <div class="mb-3 mt-3">
-    <label for="datetime" class="form-date">Data de nascimento </label>
-    <input type="date" id ="date" name="date" class="form-control" required>
-  </div>
-    <label for="message">* Mensagem:</label>
-    <textarea id="message" name="message" ></textarea>
-
-    <button type="submit">Enviar</button>
-  <div>
-  </div>  
 </form> 
 </body>
 
