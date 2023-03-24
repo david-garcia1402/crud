@@ -13,6 +13,9 @@
   <div class="alert alert-success">
     <strong>CADASTRADO COM SUCESSO!</strong></a>.
   </div>
+  <?php 
+       $ 
+  ?>
 
 </body>
 </html>
@@ -26,7 +29,7 @@
         $data_cadastro = $_GET["date"];
         $password_ = $_GET["password"];
     
-    $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password_)
+    $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password)
             VALUES ('{$nome}', '{$email}', '{$data_cadastro}', '{$password_}')";
     
     $res = $conn->query($sql);
