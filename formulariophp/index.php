@@ -14,7 +14,7 @@
     <style>
       body{
         background-color: #f2f2f2;
-        padding-top: 100px;
+        padding-bottom: 20px;
       }
 
       .card
@@ -24,7 +24,7 @@
 
       .titulo{
         display: flex;
-        margin-left: 45%;
+        margin-left: 600px;
         text-shadow: 2px 2px #e5e5e5;
 
       }
@@ -37,6 +37,7 @@
         border-style: solid;
         border-width: 1px;
         border-radius: 8px;
+        margin-bottom: 0px;
       }
     </style>
 <form action="salvar-usuario.php" method="GET" class="was-validated">        
