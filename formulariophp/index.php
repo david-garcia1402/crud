@@ -67,5 +67,8 @@
     </div>
 </form> 
 </body>
+<?php 
+  include("config.php");
+?>
 
 </html>
