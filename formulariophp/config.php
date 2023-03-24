@@ -1,11 +1,8 @@
 <?php
 
-$conf = array(
-    'dbDatabase' => 'sqlform',
-    'dbHost'     => '127.0.0.1',
-    'dbUser'     => 'root',
-    'dbPass'     => 'hardness'
+define('HOST', 'localhost');
+define('USER', 'root');
+define('PASS', 'hardness');
+define('BASE', 'sqlform');
 
-);
-
-$conn = new mysqli("dbDatabase", "dbHost", "dbUser", "dbPass");
+$conn = new MySQLi(HOST, USER, PASS, BASE);
