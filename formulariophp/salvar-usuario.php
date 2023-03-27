@@ -14,7 +14,6 @@
     <strong>CADASTRADO COM SUCESSO!</strong></a>.
   </div>
   <?php 
-       $ 
   ?>
 
 </body>
