@@ -13,6 +13,7 @@
   <div class="alert alert-success">
     <strong>CADASTRADO COM SUCESSO!</strong></a>.
   </div>
+
   <?php 
   ?>
 
@@ -26,7 +27,7 @@
         $nome = $_GET["name"];
         $email = $_GET["email"];
         $data_cadastro = $_GET["date"];
-        $password_ = $_GET["password"];
+        $password_ = md5($_GET["password"]);
     
     $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password)
             VALUES ('{$nome}', '{$email}', '{$data_cadastro}', '{$password_}')";
