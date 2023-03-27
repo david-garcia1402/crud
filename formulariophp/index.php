@@ -13,7 +13,6 @@
     <style>
       body{
         background-color: #f2f2f2;
-        padding-bottom: 20px;
       }
 
       .card
@@ -25,6 +24,7 @@
         display: flex;
         margin-left: 600px;
         text-shadow: 2px 2px #e5e5e5;
+        padding-top: 50px;
 
       }
 
@@ -37,6 +37,8 @@
         border-width: 1px;
         border-radius: 8px;
         margin-bottom: 0px;
+        width: 400px;
+        margin-left: 480px;
       }
     </style>
 <form action="salvar-usuario.php" method="GET" class="was-validated">        
@@ -58,7 +60,7 @@
               <input type="date" id ="date" name="date" class="form-control" required>
             </div>
               <label for="password">Senha:</label>
-              <input type="password" id = "password" name="password" class="form-control" required>
+              <input type="password" id = "password" name="password" class="form-control mb-3" required>
               <button type="submit">Cadastrar</button>
           </div>
         </div>
