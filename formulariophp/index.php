@@ -38,7 +38,7 @@
         border-radius: 8px;
         margin-bottom: 0px;
         width: 400px;
-        margin-left: 480px;
+        margin-left: 470px;
       }
     </style>
 <form action="salvar-usuario.php" method="GET" class="was-validated">        
