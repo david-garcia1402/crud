@@ -25,7 +25,7 @@
 </style>
   <div class="row">
         <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">CADASTRADO COM SUCESSO!</h4> 
+            <h4 class="alert-heading">CADASTRADO COM SUCESSO!</h4>  <!--Caso o cadastro for bem sucedido, vai vim para esta página mostrando que foi um sucesso -->
         </div>
     </div>
 

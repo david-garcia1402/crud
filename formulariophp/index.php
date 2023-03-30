@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap link/script para auxílio do front-end -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Teste</title>
 </head>
@@ -41,8 +42,10 @@
         margin-left: 470px;
       }
     </style>
+  <!--Cadastro com os espaços 'nome', 'email', 'data de cadastro' e 'senha'
+      O action do formulário irá salvar o usuário no banco de dados -->
 <form action="salvar-usuario.php" method="GET" class="was-validated">        
-  <input type="hidden" name ="acao" value="cadastrar">
+  <input type="hidden" name ="acao" value="cadastrar">   <!--Input hidden para fazer o switch case no arquivo 'salvar-usuario.php'  -->
       <div class = "login">
         <div class ="container">
           <div class ="row">
@@ -69,7 +72,7 @@
 </form> 
 </body>
 <?php 
-  include("config.php");
+  include("config.php"); //conexão com o banco de dados
 ?>
 
 </html>

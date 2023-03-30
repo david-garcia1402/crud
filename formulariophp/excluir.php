@@ -24,7 +24,7 @@
         <div class="row">
             <div class="card mb-3 mt-3">
                 <label class="form-label mb-3">Excluir usuário pelo <strong>ID</strong> 
-                    <input type="text" class="form-control" name="excluir">
+                    <input type="text" class="form-control" name="excluir">  <!-- Aqui neste input você irá pesquisar o ID do usuário que deseja excluir-->
                     <label class="mb-3 mt-3"></label>
                     <button type="submit" class="btn btn-danger">Excluir</button>
                 </label>
@@ -35,7 +35,7 @@
     <div class="row">
       <?php 
           require_once('config.php');
-          $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";
+          $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";   //mostrando a lista de usuários para você consultar qual usuário deseja excluir
           $listres = $conn->query($listsql); 
           
           echo "<table class='table'>";

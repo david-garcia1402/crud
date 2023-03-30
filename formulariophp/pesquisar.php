@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="card mb-3 mt-3">
-                <label class="form-label mb-3"> Pesquisar usuário pelo <strong>Nome</strong> 
+                <label class="form-label mb-3"> Pesquisar usuário pelo <strong>Nome</strong> <!--Este form irá receber o nome que queira pesquisar através do nome da pessoa-->
                     <input type="text" class="form-control" name="search">
                     <label class="mb-3 mt-3"></label>
                     <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -31,7 +31,7 @@
             </div>   
         </div>
         <?php 
-            require_once('config.php');
+            require_once('config.php'); // lista de usuários registrados embaixo do card
             $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";
             $listres = $conn->query($listsql); 
             

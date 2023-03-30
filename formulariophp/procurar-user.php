@@ -36,11 +36,11 @@
                 <label class="form-label"><strong>USUÁRIO ENCONTRADO:</strong></label>
                     <?php 
                         $pesquisa = $_GET["search"];
-                        require_once('config.php');
-                        $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios WHERE nome LIKE '%{$pesquisa}%'";
+                        require_once('config.php');  
+                        $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios WHERE nome LIKE '%{$pesquisa}%'";  //query para pesquisar a pessoa através do $_get search
                         $listres = $conn->query($listsql); 
                         
-                        echo "<table class='table'>";
+                        echo "<table class='table'>"; //table que irá mostrar as informações da pessoa pesquisada
                         echo "<tr>";
                         echo "<th>ID</th>";
                         echo "<th>Nome</th>";

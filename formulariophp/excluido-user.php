@@ -31,15 +31,15 @@
     <button type="submit" class="btn btn-primary m-3">Voltar</button>
 </form>
 <?php 
-    include('config.php');
-    $excluir = $_GET["excluir"];
-    $deletesql = "DELETE FROM usuarios WHERE id = '$excluir'";
+    include('config.php'); 
+    $excluir = $_GET["excluir"]; 
+    $deletesql = "DELETE FROM usuarios WHERE id = '$excluir'"; //query para deletar o usuário do banco de dados através do ID
     $delres = $conn->query($deletesql);
 
     if($delres == True){
-        echo '<script>alert("Usuário excluído com sucesso!")</script>';
+        echo '<script>alert("Usuário excluído com sucesso!")</script>'; //caso for excluído com sucesso, irá mostrar este pop-alert que foi bem sucedido
     }else{
-        echo  "<script>alert('ID não encontrado!)</script>";
+        echo  "<script>alert('ID não encontrado!)</script>"; //caso não for, pop-alert para mostrar que não encontrou o ID e após isso, será redirecionado para a lista de usuários
         header("Location: listar-usuario.php");
     }
 

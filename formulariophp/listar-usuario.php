@@ -66,7 +66,7 @@
     <div class="row">
       <?php 
           require_once('config.php');
-          $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";
+          $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";  //página dedicada somente para listar os usuários
           $listres = $conn->query($listsql); 
           
           echo "<table class='table'>";

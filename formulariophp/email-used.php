@@ -11,7 +11,7 @@
 <body>
 <div class="alert alert-danger" role="alert">
     <div class="justify-content-center">
-        Este e-mail já está em uso!
+        Este e-mail já está em uso! <!--Alert para informar que o email já está em uso --> 
     </div>
 </div>
 <form action="index.php">
