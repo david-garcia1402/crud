@@ -8,44 +8,59 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <title>Document</title>
 </head>
-<body>
+<body style="margin-left:10px">
+<div class="titulo">
   <h1 style="font-family: Arial, Helvetica, sans-serif; color:blue">LISTA DE USUÁRIOS</h1>
+</div>
 <style>
   body{
     background-color: #f2f2f2;
   }
 
-  h1{
+  .titulo{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-    padding-left: 45px;
+    margin-left:490px;
+    padding-top: 10px;
   }
   
   .container{
-    width: 700px;
-    display: flex;
+    width: 630px;
     margin-left: 470px;
 
   }
-  .btn{
-    display: flex;
-    justify-content: start;
-    position: absolute;
-    top: 0;
-    left: 0;
+  .button1{
+    margin-top:-50px;
   }
 
+  .button2{
+    margin-top: -100px;
+  }
+
+  .row{
+
+    margin-left: -120px;
+  }
+
+
 </style>
-<div class="button">
-  <form action="index.php">
-    <button type="submit" class="btn btn-primary m-2">Cadastrar novo usuário</button>
-  </form>
-  <form action="pesquisar.php">
-    <button type="submit" class="btn btn-primary my-5 m-2">Pesquisar usuário</button>
-  </form>
+<div class="button1">
+  <div class="button">
+    <form action="index.php">
+      <button type="submit" class="btn btn-primary ">Cadastrar novo usuário</button>
+    </form>
+  </div>
+  <div name="button2">
+    <form action="pesquisar.php">
+      <button type="submit" class="btn btn-primary mt-3">Pesquisar usuário</button>
+    </form>
+  </div>
+  <div name="button3">
+    <form action="pesquisar.php">
+      <button type="submit" class="btn btn-danger mt-3">Excluir usuário</button>
+    </form>
+  </div>
 </div>
+
 
 <div class="container">
     <div class="row">
