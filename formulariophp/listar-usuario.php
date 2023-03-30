@@ -38,6 +38,15 @@
   }
 
 </style>
+<div class="button">
+  <form action="index.php">
+    <button type="submit" class="btn btn-primary m-2">Cadastrar novo usuário</button>
+  </form>
+  <form action="pesquisar.php">
+    <button type="submit" class="btn btn-primary my-5 m-2">Pesquisar usuário</button>
+  </form>
+</div>
+
 <div class="container">
     <div class="row">
       <?php 
