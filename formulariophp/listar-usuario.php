@@ -26,7 +26,7 @@
   .container{
     width: 700px;
     display: flex;
-    margin-left: 450px;
+    margin-left: 470px;
 
   }
   .btn{
@@ -38,9 +38,6 @@
   }
 
 </style>
-<form action="index.php">
-<button type="submit" class="btn btn-primary m-3">Cadastrar novo usuário</button>
-</form>
 <div class="container">
     <div class="row">
       <?php 
