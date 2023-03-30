@@ -37,5 +37,9 @@
     <button type="submit" class="btn btn-primary m-3">Cadastrar novo usuário</button>
 </form>
 
+<form>
+  <button type="submit" class="btn btn-danger m-3">Pesquisar usuários</button>
+</form>
+
 </body>
 </html>
