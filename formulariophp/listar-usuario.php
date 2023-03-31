@@ -82,6 +82,7 @@
             echo "<td>" . $row[1] . "</td>";
             echo "<td>" . $row[2] . "</td>";
             echo "<td>" . $row[3] . "</td>";
+            echo "<td><button type='button' class='btn btn-outline-danger btn-sm btn-block' onclick='userDelete(\"$row[0]\")'>Excluir</button></td>";
             echo "</tr>";
           }
           echo "</table>";
