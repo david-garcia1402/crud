@@ -57,11 +57,6 @@
       <button type="submit" class="btn btn-primary mt-3">Pesquisar usuário</button>
     </form>
   </div>
-  <div name="button3">
-    <form action="excluir.php">
-      <button type="submit" class="btn btn-danger mt-3">Excluir usuário</button>
-    </form>
-  </div>
 </div>
 
 
