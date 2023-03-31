@@ -30,10 +30,11 @@
                 </label>
             </div>   
         </div>
+    </form>
         <?php 
             require_once('config.php'); // lista de usuários registrados embaixo do card
             $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";
-            $listres = $conn->query($listsql); 
+            $listres = $conn->query($listsql);
             
             echo "<table class='table'>";
             echo "<tr>";
@@ -51,8 +52,19 @@
             echo "</tr>";
             }
             echo "</table>";
+            $num_linhas = mysqli_num_rows($listres);
+            if($num_linhas == 0){
+                echo "<div class='container'>";
+                echo"<div class='alert alert-danger text-center'>";
+                echo"<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.";
+                echo "<div class='button'>";
+                echo "<form action='index.php'>";
+                    echo "<button type='submit' class='btn btn-danger mt-3'>Cadastrar novo usuário</button>";
+                echo "</form>";
+                echo "</div>";
+            }
+
         ?>
     </div>
-</form>
 </body>
 </html>
