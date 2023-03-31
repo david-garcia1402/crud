@@ -11,10 +11,6 @@
   <script src="funcexcluir.js"></script>
   <title>Document</title>
 </head>
-<body style="margin-left:10px">
-<div class="titulo">
-  <h1 style="font-family: Arial, Helvetica, sans-serif; color:blue">LISTA DE USUÁRIOS</h1>
-</div>
 <style>
   body{
     background-color: #f2f2f2;
@@ -46,6 +42,12 @@
 
 
 </style>
+<body style="margin-left:10px">
+<div class="titulo">
+  <h1 style="font-family: Arial, Helvetica, sans-serif; color:blue">LISTA DE USUÁRIOS</h1>
+</div>
+
+<div id="alert"></div>
 <div class="button1">
   <div class="button">
     <form action="index.php">
@@ -73,6 +75,7 @@
             echo "<th>Nome</th>";
             echo "<th>E-mail</th>";
             echo "<th>Data</th>";
+            echo "<th></th>";
             echo "</tr>";
           while($row = mysqli_fetch_row($listres)){ 
             echo "<tr>";
