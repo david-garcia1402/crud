@@ -24,7 +24,7 @@
   
   .container{
     width: 630px;
-    margin-left: 470px;
+    margin-left: 420px;
 
   }
   .button1{
@@ -37,7 +37,7 @@
 
   .row{
 
-    margin-left: -120px;
+    margin-left: -10px;
   }
 
 
@@ -64,6 +64,7 @@
 
 <div class="container">
     <div class="row">
+      
       <?php 
           require_once('config.php');
           $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios";  //página dedicada somente para listar os usuários
@@ -87,8 +88,16 @@
             echo "</tr>";
           }
           echo "</table>";
-      ?>
-      </div>
-</div> 
+          echo "</div>";
+          echo "</div>";
+          $num_linhas = mysqli_num_rows($listres);
+          if($num_linhas == 0){
+              echo "<div class='container'>";
+              echo"<div class='alert alert-danger text-center'>";
+              echo"<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.";
+              echo "<div class='button mx-auto'>";
+              echo "</div>";
+          }
+      ?> 
 </body>
 </html> 
