@@ -8,7 +8,7 @@
           $data_cadastro = $_GET["date"];
           $password_ = md5($_GET["password"]);
           
-          $sql2 = "SELECT * FROM usuarios WHERE email = '$email'";  //validação para ver se já tem um email existente cadastrado
+          $sql2 = "SELECT * FROM usuarios WHERE email = '$email'";  //query para validação para ver se já tem um email existente cadastrado
           $checksql = mysqli_query($conn, $sql2);
 
           if(mysqli_num_rows($checksql) == 0){ //se o número de e-mail congruente for igual a 0 (ou seja, sem email igual)
