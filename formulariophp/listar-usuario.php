@@ -93,7 +93,7 @@
           $num_linhas = mysqli_num_rows($listres);
           if($num_linhas == 0){
               echo "<div class='container'>";
-              echo"<div class='alert alert-danger text-center'>";
+              echo"<div class='alert alert-info text-center'>";
               echo"<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.";
               echo "<div class='button mx-auto'>";
               echo "</div>";

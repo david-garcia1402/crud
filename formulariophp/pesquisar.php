@@ -55,11 +55,11 @@
             $num_linhas = mysqli_num_rows($listres);
             if($num_linhas == 0){
                 echo "<div class='container'>";
-                echo"<div class='alert alert-danger text-center'>";
+                echo"<div class='alert alert-warning text-center'>";
                 echo"<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.";
                 echo "<div class='button'>";
                 echo "<form action='index.php'>";
-                    echo "<button type='submit' class='btn btn-danger mt-3'>Cadastrar novo usuário</button>";
+                    echo "<button type='submit' class='btn btn-primary mt-3'>Cadastrar novo usuário</button>";
                 echo "</form>";
                 echo "</div>";
             }
