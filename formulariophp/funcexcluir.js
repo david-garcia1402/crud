@@ -20,7 +20,7 @@ async function userDelete(idUser) {
     
         var message = '<div class="alert alert-success alert-dismissible fade show" id="msg-alert">' +
                         '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                        'Usuário excluído com <strong>sucesso</strong>!.' +
+                        'Usuário excluído com <strong>sucesso</strong>!' +
                       '</div>';
   
         document.getElementById("alert").innerHTML = message;
