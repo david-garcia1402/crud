@@ -15,7 +15,6 @@
             $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password)  
             VALUES ('{$nome}', '{$email}', '{$data_cadastro}', '{$password_}')";  //vai inserir o usuário no banco de dados através desta query
             $res = $conn->query($sql);
-            header("Location: index.php");  
           }
           else{
             header("Location: email-used.php"); //se já houver um e-mail igual registrado, vai ser mandado para o arquivo 'email-used.php' alertando que o e-mail já está sendo usado

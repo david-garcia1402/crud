@@ -36,3 +36,29 @@ async function userDelete(idUser) {
     xmlhttp.send();
   
   }
+async function userRegistered() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+    
+        var message = '<div class="alert alert-success alert-dismissible fade show" id="msg-alert">' +
+                        '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                        'Usuário cadastrado com <strong>sucesso</strong>!' +
+                      '</div>';
+
+        document.getElementById("alert").innerHTML = message;
+
+        $("#msg-alert").fadeTo(2000, 500).slideUp(500, function () {
+          $("#msg-alert").slideUp(500);
+          location.reload(); 
+        });
+      }
+    };
+    var name     = document.getElementById("name").value;
+    var email     = document.getElementById("email").value;
+    var date     = document.getElementById("date").value;
+    var password     = document.getElementById("password").value;
+
+    xmlhttp.open("GET", "salvar-usuario.php?acao=cadastrar&name=" + name + "&email=" + email + "&date=" + date + "&password=" + password, true);
+    xmlhttp.send();
+}

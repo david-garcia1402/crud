@@ -27,15 +27,12 @@
 
 
 </style>
-<form action="listar-usuario.php">
-    <button type="submit" class="btn btn-primary m-3">Voltar</button>
-</form>
     <div class="container">
         <div class="row">
             <div class="card mb-3 mt-3">
                 <label class="form-label"><strong>USUÁRIO ENCONTRADO:</strong></label>
                     <?php 
-                        $pesquisa = $_GET["search"];
+                        $pesquisa = $_GET["userSearch"];
                         require_once('config.php');  
                         $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios WHERE nome LIKE '%{$pesquisa}%'";  //query para pesquisar a pessoa através do $_get search
                         $listres = $conn->query($listsql); 

@@ -31,7 +31,7 @@
       }
 
       .containerbutton{
-        margin-top: -70px;
+        margin-top: -50px;
         margin-left: 10px;
       }
 
@@ -54,42 +54,38 @@
         width: 630px;
       }
 
-      .alert{
-        margin-right: 60px;
-      }
-
     </style>
 <h2 class="titulo1" style="font-family: Arial, Helvetica, sans-serif; color:blue">CADASTRO:</h2>
-<div class="containerbutton":>
-  <div name="button2">
-    <button type="submit" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal">Pesquisar usuário</button>
-  </div>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Pesquisar pelo nome</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <input type="text" class="form-control" name="search">
-        <label class="mb-3 mt-3"></label>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <form action="procurar-user.php">
-          <button type="button" class="btn btn-primary">Pesquisar</button>
-        </form>
-      </div>
+  <div class="containerbutton":>
+    <div name="button2">
+      <button type="submit" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal">Pesquisar usuário</button>
     </div>
   </div>
-</div>
+  <form action="procurar-user.php" method="GET">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pesquisar usuário pelo nome</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label class="mb-3 mt-3"> Digite o nome do usuário </label>
+            <input type="text" class="form-control" name="userSearch">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Pesquisar</button>  
+          </div>
+        </div>
+      </div>
+  </div>
+</form>
 <!--Cadastro com os espaços 'nome', 'email', 'data de cadastro' e 'senha'
   O action do formulário irá salvar o usuário no banco de dados -->
-<form action="salvar-usuario.php" method="GET" class="was-validated">        
+<form class="was-validated">        
 <input type="hidden" name ="acao" value="cadastrar">   <!--Input hidden para fazer o switch case no arquivo 'salvar-usuario.php'  -->
     <div class ="container">
       <div class ="row">
@@ -108,7 +104,7 @@
           </div>
             <label for="password">Senha:</label>
             <input type="password" id = "password" name="password" class="form-control mb-3" required>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="button" class="btn btn-primary" onclick="userRegistered()">Cadastrar</button>
         </div>
       </div>
     </div>
