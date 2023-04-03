@@ -62,3 +62,21 @@ async function userRegistered() {
     xmlhttp.open("GET", "salvar-usuario.php?acao=cadastrar&name=" + name + "&email=" + email + "&date=" + date + "&password=" + password, true);
     xmlhttp.send();
 }
+
+async function userList(filtro = ""){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("listaUser").innerHTML = this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "listauser.php?filtro=" + filtro, true);
+  xmlhttp.send();
+}
+
+async function userFilter(){
+  var filtro     = document.getElementById("userSearch").value;
+
+  userList(filtro);
+
+}
