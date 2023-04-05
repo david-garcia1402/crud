@@ -7,7 +7,7 @@
         $where = " WHERE nome LIKE '%{$filtro}%'";
     }
 
-    $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios" . $where;  //página dedicada somente para listar os usuários
+    $listsql = "SELECT id, nome, email, data_cadastro FROM usuarios" . $where; 
     $listres = $conn->query($listsql); 
     
     echo "<table class='table'>";
@@ -32,8 +32,7 @@
     echo "</div>";
     $num_linhas = mysqli_num_rows($listres);
     if($num_linhas == 0){
-        echo "<div class='container'>";
-        echo"<div class='alert alert-info text-center'>";
+        echo"<div class='alert alert-info'>";
         echo"<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.";
         echo "<div class='button mx-auto'>";
         echo "</div>";
