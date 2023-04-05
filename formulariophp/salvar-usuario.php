@@ -17,8 +17,10 @@
             $res = $conn->query($sql);
           }
           else{
-            header("Location: email-used.php"); //se já houver um e-mail igual registrado, vai ser mandado para o arquivo 'email-used.php' alertando que o e-mail já está sendo usado
-
+            echo '<div class="alert alert-info">' +
+            '<strong>Atenção!</strong> Não tem nenhum usuário listado neste momento.' +
+            '<div class="button mx-auto">'+
+            '</div>';
           } 
     }
 ?>
