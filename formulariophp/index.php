@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="funcexcluir.js"></script>
+    <script src="data.js"></script>
     <title>Teste</title>
 </head>
 <body onload="userList()">
@@ -50,10 +50,10 @@
       }
 
       .containertable{
-        margin-left: 400px;
-        width: 630px;
+        width: 600px;
+        margin-left: 470px;
       }
-
+      
     </style>
 <h2 class="titulo1" style="font-family: Arial, Helvetica, sans-serif; color:blue">CADASTRO:</h2>
   <div class="containerbutton":>
