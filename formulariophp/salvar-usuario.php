@@ -17,7 +17,12 @@
             $res = $conn->query($sql);
           }
           else{
-            header("Location: email-used.php"); //se já houver um e-mail igual registrado, vai ser mandado para o arquivo 'email-used.php' alertando que o e-mail já está sendo usado
+            header('HTTP/1.0 400 Bad Request');
+
+            $retorno['code']    = 400;
+            $retorno['message'] = "E-mail já cadastrado.";
+      
+            echo json_encode($retorno, JSON_UNESCAPED_UNICODE); //se já houver um e-mail igual registrado, vai ser mandado para o arquivo 'email-used.php' alertando que o e-mail já está sendo usado
           } 
     }
 ?>
