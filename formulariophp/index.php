@@ -37,12 +37,13 @@
 
       .card
       {
+        margin-top: 0;
         padding: 10px;
         width: 400px;
         padding-bottom: 15px;
         margin-left: 65px;
-        margin-top: 20px;
         border-radius: 10px;
+        padding-top: 0;
       }
       .titulo1{
           margin-left: 600px;
@@ -54,6 +55,14 @@
         margin-left: 470px;
       }
       
+      .icone{
+        width: 30px;
+        margin-left: 350px;
+        display: flex;
+        padding-top: 10px;
+
+      }
+
     </style>
 <h2 class="titulo1" style="font-family: Arial, Helvetica, sans-serif; color:blue">CADASTRO:</h2>
   <div class="containerbutton":>
@@ -85,11 +94,12 @@
 </form>
 <!--Cadastro com os espaços 'nome', 'email', 'data de cadastro' e 'senha'
   O action do formulário irá salvar o usuário no banco de dados -->
-<form class="was-validated">        
+<form class="was-validated">     
 <input type="hidden" name ="acao" value="cadastrar">   <!--Input hidden para fazer o switch case no arquivo 'salvar-usuario.php'  -->
     <div class ="container">
       <div class ="row">
         <div class="card">
+        <img class="icone" src="formulario-de-registro.png" title="Ícone">  
           <div class="mb-3">  
             <label for="name" class="form-label">Nome:</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
