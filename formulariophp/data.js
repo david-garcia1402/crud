@@ -39,19 +39,34 @@ async function userDelete(idUser) {
 async function userRegistered() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-    
-        var message = '<div class="alert alert-success alert-dismissible fade show" id="msg-alert">' +
-                        '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                        'Usuário cadastrado com <strong>sucesso</strong>!' +
-                      '</div>';
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          var message = '<div class="alert alert-success alert-dismissible fade show" id="msg-alert">' +
+          '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+          'Usuário cadastrado com <strong>sucesso</strong>!' +
+          '</div>';
 
-        document.getElementById("alert").innerHTML = message;
+          document.getElementById("alert").innerHTML = message;
 
-        $("#msg-alert").fadeTo(2000, 500).slideUp(500, function () {
+          $("#msg-alert").fadeTo(2000, 500).slideUp(500, function () {
           $("#msg-alert").slideUp(500);
           location.reload(); 
-        });
+          });
+        }
+        if (this.status == 400) {
+          var retorno = JSON.parse(this.responseText);
+          var message = '<div class="alert alert-warning alert-dismissible fade show" id="msg-alert">' +
+          '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+           retorno.message +
+          '</div>';
+
+          document.getElementById("alert").innerHTML = message;
+
+          $("#msg-alert").fadeTo(2000, 500).slideUp(500, function () {
+          $("#msg-alert").slideUp(500);
+          });
+        }
+
       }
     };
     var name     = document.getElementById("name").value;
