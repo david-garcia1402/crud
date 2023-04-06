@@ -93,5 +93,8 @@ async function userFilter(){
   var filtro     = document.getElementById("userSearch").value;
 
   userList(filtro);
-
+}
+async function userFilterClear(){
+  document.getElementById("userSearch").value = "";
+  userList();
 }
