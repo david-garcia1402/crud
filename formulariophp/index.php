@@ -102,8 +102,8 @@
           <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Pesquisar usuário" aria-label="Recipient's username" aria-describedby="button-addon2" id="userSearch">
           <div class="input-group-append">
-            <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="userFilter()"><span class="fa fa-search"></span></button>
-            <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="userFilterClear()"><span class="fa fa-trash"></span></button>
+            <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="userFilter()" title="Pesquisar usuário"><span class="fa fa-search"></span></button>
+            <button class="btn btn-outline-primary" type="button" id="button-addon2" onclick="userFilterClear()" title="Limpar filtro"><span class="fa fa-trash"></span></button>
           </div>
         </div>
         </div>
