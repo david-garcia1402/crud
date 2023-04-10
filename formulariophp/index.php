@@ -33,59 +33,65 @@
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">CADASTRO DE USUÁRIO</h5>
+        <h5 class="modal-title" id="titleRegister">CADASTRO DE USUÁRIO</h5>
+        <h5 class="modal-title" id="titleEdit">EDITAR USUÁRIO</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-      <div id="alert"></div>
+  <div class="modal-body">
+    <div id="alert"></div>
       <form class="was-validated"> 
-        <!--Cadastro com os espaços 'nome', 'email', 'data de cadastro' e 'senha'
-            O action do formulário irá salvar o usuário no banco de dados -->    
+    <!--Cadastro com os espaços 'nome', 'email', 'data de cadastro' e 'senha'
+        O action do formulário irá salvar o usuário no banco de dados -->    
         <input type="hidden" name ="acao" value="cadastrar">   <!--Input hidden para fazer o switch case no arquivo 'salvar-usuario.php'  -->
-            <div class ="container">
-              <div class="row">
-                <div class="col-12 mb-3">  
-                    <label for="name" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
-                </div>
+          <div class ="container">
+            <div class="row" hidden>
+              <div class="col-12">
+                <input type="text" class="form-control" id="idUser" name="idUser">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-3">  
+                  <label for="name" class="form-label">Nome:</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Insira seu nome" required>
+              </div>
             </div>
             <div class="row">               
-                <div class="col-12 mb-3">  
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
-                </div>
+              <div class="col-12 mb-3">  
+                  <label for="email" class="form-label">E-mail:</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder = "Insira seu e-mail"required>
+              </div>
             </div>
             <div class="row">
-                <div class="col-12 mb-3">  
-                    <label for="datetime" class="form-date">Data de cadastro </label>
-                    <input type="date" id ="date" name="date" class="form-control" required>
-                </div>
+              <div class="col-12 mb-3">  
+                  <label for="datetime" class="form-date">Data de cadastro </label>
+                  <input type="date" id ="date" name="date" class="form-control" required>
+              </div>
             </div>
             <div class="row">
-                <div class="col-12 mb-3">  
-                    <label for="password">Senha:</label>
-                    <input type="password" id = "password" name="password" class="form-control mb-3" required>
-                </div>
+              <div class="col-12 mb-3" id="divPassword">  
+                  <label for="password">Senha:</label>
+                  <input type="password" id = "password" name="password" class="form-control mb-3" required>
+              </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <button type="button" class="btn btn-primary btn-block" onclick="userRegistered()">Salvar</button>
-                </div>
-                <div class="col-6"></div>
-                <div class="col-3">
-                    <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fechar</button>
-                </div>    
+              <div class="col-3">
+                  <button type="button" class="btn btn-primary btn-block" onclick="userRegistered()">Salvar</button>
+              </div>
+              <div class="col-6"></div>
+              <div class="col-3">
+                  <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fechar</button>
+              </div>    
             </div>
-            </div>
-            </div>
+          </div>
         </div>
-        </form>
-      </div>
     </div>
+    </form>
   </div>
 </div>
+
+
 <div class="container">
   <div class="row">
       <h2 style="font-family: Arial, Helvetica, sans-serif; color:blue; display: flex; margin-left:475px; padding-top: 20px;">USUÁRIOS</h2>
@@ -93,7 +99,7 @@
   </div>
   <div class="row">
       <div class="col-4">
-            <button type="button" class="btn btn-primary mt-2 mb-2" data-toggle="modal" data-target="#exampleModal">Cadastrar</button>
+            <button type="button" class="btn btn-primary mt-2 mb-2" onclick="cadastroUser()" title="Cadastrar">Cadastrar</button>
         </div>
         <div class="col-4"></div>
         <div class="col-4">
