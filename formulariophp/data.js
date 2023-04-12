@@ -86,8 +86,8 @@ async function userEdit(idUser) {
 
   xmlhttp.open("GET", "edit-user.php?edit=" + idUser, true);
   xmlhttp.send();
-  
-}async function userView(idUser) {
+}
+async function userView(idUser) {
   if (idUser == "" || idUser == 0) {
     var message =
       '<div class="alert alert-danger alert-dismissible fade show" id="msg-alert">' +
@@ -138,7 +138,6 @@ async function userEdit(idUser) {
   xmlhttp.send();
 }
 
-
 async function userRegistered() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
@@ -186,9 +185,9 @@ async function userRegistered() {
   xmlhttp.open(
     "GET",
     "salvar-usuario.php?acao=cadastrar" +
-     "&idUser=" +
+      "&idUser=" +
       idUser +
-     "&name=" +
+      "&name=" +
       name +
       "&email=" +
       email +
@@ -222,7 +221,7 @@ async function userFilterClear() {
   userList();
 }
 
-function cadastroUser(){
+function cadastroUser() {
   document.getElementById("idUser").value = "";
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
