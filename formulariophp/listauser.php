@@ -29,7 +29,7 @@
         echo "<td>";
         echo "<div>";
         echo "<button type='button' class='btn btn-outline-danger btn-sm' style='max-width:30px;' onclick='userDelete(\"$row[0]\")' title='Excluir usuário'><span class='fa fa-trash'></span></button>";
-        echo "<button type='button' class='btn btn-outline-info btn-sm' style='max-width:30px; margin: 0px 5px 0px 5px ' title='Visualizar detalhes'><span class='fa fa-eye'></span></button>";
+        echo "<button type='button' class='btn btn-outline-info btn-sm' style='max-width:30px; margin: 0px 5px 0px 5px' onclick='userView(\"$row[0]\")' title='Visualizar detalhes'><span class='fa fa-eye'></span></button>";
         echo "<button type='button' class='btn btn-outline-primary btn-sm' style='max-width:30px;' onclick='userEdit(\"$row[0]\")' title='Editar usuário'><span class='fa fa-edit'></span></button>";
         echo "</div>";
         echo "</td>";
