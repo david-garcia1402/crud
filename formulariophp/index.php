@@ -35,6 +35,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="titleRegister">CADASTRO DE USUÁRIO</h5>
         <h5 class="modal-title" id="titleEdit">EDITAR USUÁRIO</h5>
+        <h5 class="modal-title" id="titleView">DETALHES DO USUÁRIO</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -46,9 +47,11 @@
         O action do formulário irá salvar o usuário no banco de dados -->    
         <input type="hidden" name ="acao" value="cadastrar">   <!--Input hidden para fazer o switch case no arquivo 'salvar-usuario.php'  -->
           <div class ="container">
-            <div class="row" hidden>
+            
+            <div class="row" hidden id="hiddenRowID">
               <div class="col-12">
-                <input type="text" class="form-control" id="idUser" name="idUser">
+                <label for="idUser" class="form-label">ID:</label>
+                <input type="text" class="form-control mb-3" id="idUser" name="idUser">
               </div>
             </div>
             <div class="row">
