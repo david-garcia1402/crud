@@ -74,8 +74,11 @@ async function userEdit(idUser) {
         document.getElementById("date").setAttribute("disabled", true);
         document.getElementById("divPassword").setAttribute("hidden", true);
         document.getElementById("titleRegister").setAttribute("hidden", true);
+        document.getElementById("titleView").setAttribute("hidden", true);
         document.getElementById("titleEdit").removeAttribute("hidden");
         document.getElementById("password").removeAttribute("required");
+        document.getElementById("hiddenRowID").setAttribute("hidden", true);
+        document.getElementById("alert").setAttribute("hidden", true);
         $("#exampleModal").modal("toggle");
       }
     }
@@ -83,7 +86,59 @@ async function userEdit(idUser) {
 
   xmlhttp.open("GET", "edit-user.php?edit=" + idUser, true);
   xmlhttp.send();
+  
+}async function userView(idUser) {
+  if (idUser == "" || idUser == 0) {
+    var message =
+      '<div class="alert alert-danger alert-dismissible fade show" id="msg-alert">' +
+      '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+      "<strong>Error!</strong> Pick one item!" +
+      "</div>";
+
+    document.getElementById("alert").innerHTML = message;
+
+    $("#msg-alert")
+      .fadeTo(2000, 500)
+      .slideUp(500, function () {
+        $("#msg-alert").slideUp(500);
+      });
+
+    return;
+  }
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      var retorno = JSON.parse(this.responseText); //this responseText tem os valores da coluna do SQL
+      console.log(retorno);
+
+      if (retorno) {
+        document.getElementById("idUser").value = retorno.id;
+        document.getElementById("name").value = retorno.nome;
+        document.getElementById("email").value = retorno.email;
+        document.getElementById("date").value = retorno.data_cadastro;
+        document.getElementById("name").setAttribute("disabled", true);
+        document.getElementById("email").setAttribute("disabled", true);
+        document.getElementById("date").setAttribute("disabled", true);
+        document.getElementById("idUser").setAttribute("disabled", true);
+        document.getElementById("divPassword").setAttribute("hidden", true);
+        document.getElementById("titleRegister").setAttribute("hidden", true);
+        document.getElementById("titleEdit").setAttribute("hidden", true);
+        document.getElementById("titleView").removeAttribute("hidden");
+        document.getElementById("hiddenRowID").removeAttribute("hidden");
+        document.getElementById("password").removeAttribute("required");
+        document.getElementById("alert").setAttribute("hidden", true);
+        $("#exampleModal").modal("toggle");
+      }
+    }
+  };
+
+  xmlhttp.open("GET", "view-user.php?view=" + idUser, true);
+  xmlhttp.send();
 }
+
+
 async function userRegistered() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
@@ -174,9 +229,13 @@ function cadastroUser(){
   document.getElementById("date").value = "";
   document.getElementById("password").value = "";
   document.getElementById("date").removeAttribute("disabled");
+  document.getElementById("name").removeAttribute("disabled");
+  document.getElementById("email").removeAttribute("disabled");
+  document.getElementById("hiddenRowID").setAttribute("hidden", true);
   document.getElementById("divPassword").removeAttribute("hidden");
   document.getElementById("password").setAttribute("required", true);
   document.getElementById("titleEdit").setAttribute("hidden", true);
+  document.getElementById("titleView").setAttribute("hidden", true);
   document.getElementById("titleRegister").removeAttribute("hidden");
   $("#exampleModal").modal("toggle");
 }
