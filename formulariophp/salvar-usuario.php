@@ -2,21 +2,16 @@
 <?php
     include('config.php'); //conexão com o banco de dados
     $idUser = $_GET["idUser"] ? $_GET["idUser"] : "";
-    $nome = $_GET["name"] ? $_GET["name"] : "";  //obtenção dos dados do através do $_get do index.php
     $email = $_GET["email"] ? $_GET["email"] : "";
     $data_cadastro = $_GET["date"] ? $_GET["date"] : "";
     $password_ = md5($_POST["password"]) ? $_POST["password"] : "";
     $hoje = date("Y/m/d");
-    if(empty($idUser)){  //request do input "acao" (vai dar request em "name", "email", "date" e "password")
-        $sql2 = "SELECT * FROM usuarios WHERE email = '$email'";  //query para validação para ver se já tem um email existente cadastrado
         $checksql = mysqli_query($conn, $sql2);
     $hoje = date("Y-m-d");
     if($data_cadastro !== $hoje){
       header('HTTP/1.0 400 Bad Request');
 
-        if(mysqli_num_rows($checksql) == 0){ //se o número de e-mail congruente for igual a 0 (ou seja, sem email igual)
           $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password)  
-          VALUES ('{$nome}', '{$email}', '{$data_cadastro}', '{$password_}')";  //vai inserir o usuário no banco de dados através desta query
           $res = $conn->query($sql);
         }
         else{
