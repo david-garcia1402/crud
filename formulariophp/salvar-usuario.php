@@ -10,6 +10,9 @@
     if(empty($idUser)){  //request do input "acao" (vai dar request em "name", "email", "date" e "password")
         $sql2 = "SELECT * FROM usuarios WHERE email = '$email'";  //query para validação para ver se já tem um email existente cadastrado
         $checksql = mysqli_query($conn, $sql2);
+    $hoje = date("Y-m-d");
+    if($data_cadastro !== $hoje){
+      header('HTTP/1.0 400 Bad Request');
 
         if(mysqli_num_rows($checksql) == 0){ //se o número de e-mail congruente for igual a 0 (ou seja, sem email igual)
           $sql = "INSERT INTO usuarios (nome, email, data_cadastro, password)  
@@ -18,6 +21,8 @@
         }
         else{
           header('HTTP/1.0 400 Bad Request');
+      $retorno['code']    = 400;
+      $retorno['message'] = "Insira a data correta.";
 
           $retorno['code']    = 400;
           $retorno['message'] = "E-mail já cadastrado.";
