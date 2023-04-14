@@ -84,7 +84,7 @@
               </div>
               <div class="col-6"></div>
               <div class="col-3">
-                  <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal" onclick="location.reload()">Fechar</button>
               </div>    
             </div>
           </div>
