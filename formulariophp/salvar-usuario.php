@@ -26,7 +26,6 @@
           }
           else{
             header('HTTP/1.0 400 Bad Request');
-
             $retorno['code']    = 400;
             $retorno['message'] = "E-mail já cadastrado.";
       

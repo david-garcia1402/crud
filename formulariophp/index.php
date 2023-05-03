@@ -24,9 +24,6 @@
         display: flex;
         padding-top: 10px;
       }
-
-
-
     </style>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -68,7 +65,7 @@
             </div>
             <div class="row">
               <div class="col-12 mb-3">  
-                  <label for="datetime" class="form-date">Data de cadastro </label>
+                  <label for="datetime" class="form-date">Data de cadastro: </label>
                   <input type="date" id ="date" name="date" class="form-control" required>
               </div>
             </div>
