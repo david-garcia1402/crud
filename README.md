@@ -7,6 +7,5 @@
 <li><a>BOOTSTRAP para auxílio do front-end </a></li>
 </br>
 
-![image](https://user-images.githubusercontent.com/120138460/236310484-7dc8b290-16b3-4599-9091-d9c35c93e771.png)
-
+![image](https://user-images.githubusercontent.com/120138460/236311606-b55abcfb-765f-4d92-9812-947739dc724c.png)
 
