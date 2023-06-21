@@ -1,5 +1,5 @@
 <ul><h1>CRUD com:</h1></ul>
-<li><a>PHP para montar o index</a></li>
+<li><a>PHP</a></li>
 <li><a>Querys em banco de dados</a></li>
 <li><a>JavaScript para criação de funções</a></li>
 <li><a>AJAX para fazer requisições via xmlHTTP em arquivos PHP</a></li>
