@@ -12,21 +12,21 @@ async function userDelete(idUser) {
       .fadeTo(2000, 500)
       .slideUp(500, function () {
         $("#msg-alert").slideUp(500);
+        location.reload();
       });
 
     return;
-  }
-
+    }
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var message =
-        '<div class="alert alert-success alert-dismissible fade show" id="msg-alert">' +
+        '<div class="alert alert-info alert-dismissible fade show" id="msg-alert">' +
         '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
         "Usuário excluído com <strong>sucesso</strong>!" +
         "</div>";
 
-      document.getElementById("alert").innerHTML = message;
+      document.getElementById("alertexc").innerHTML = message;
 
       $("#msg-alert")
         .fadeTo(2000, 500)

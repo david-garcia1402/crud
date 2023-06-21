@@ -90,8 +90,6 @@
     </form>
   </div>
 </div>
-
-
 <div class="container">
   <div class="row">
       <h2 style="font-family: Arial, Helvetica, sans-serif; color:blue; display: flex; margin-left:475px; padding-top: 20px;">USUÁRIOS</h2>
@@ -116,6 +114,8 @@
   </div>
   </div>
 <div class="container">
+<div id="alertexc"></div>
+
     <div class="row">
       <div class="col-12">
         <div id="listaUser"></div>
