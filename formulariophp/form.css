@@ -1,0 +1,41 @@
+h2{
+    padding-top: 1rem;
+    margin-left: 2rem;
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      margin-bottom: 0.5rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+    
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      margin-top: 2rem;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #0069d9;
+    }
+  
